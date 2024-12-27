@@ -1,0 +1,210 @@
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2b5876, #4e4376); /* Cool-toned gradient */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Introduction Section */
+.intro {
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+  animation: slideInLeft 1.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px;
+  color: #fff;
+  animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 20px;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #ccc;
+  width: 100%; 
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ccc; }
+}
+
+.detail-intro {
+  font-size: 1.2rem;
+  text-align: justify;
+  margin-bottom: 20px;
+  color: #ddd;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.links a {
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.links a:hover {
+  color: #ff7e5f;
+  transform: scale(1.2); /* Pop-out effect */
+}
+
+
+.img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background-image: url("../assets/ashwani.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-left: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: bounceIn 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: ease-in-out;
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.scroll-down a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  position: relative;
+}
+
+.scroll-down a span {
+  display: block;
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .img {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .intro {
+    width: 100%;
+  }
+}

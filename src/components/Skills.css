@@ -1,0 +1,194 @@
+.skills-section {
+  padding: 60px 0;
+  background: linear-gradient(
+    135deg,
+    #2b5876,
+    #4e4376
+  ); /* Matching hero section */
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+
+.skill-category {
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.skill span {
+  flex: 1;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.skill-bar {
+  flex: 4;
+  background: #444;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: 20px; 
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-level {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  background: linear-gradient(135deg, #ff7f50, #ff6347); /* Default color */
+}
+
+.skill-level.js {
+  background: linear-gradient(135deg, #ff7f50, #ff6347); /* JavaScript */
+}
+
+.skill-level.ts {
+  background: linear-gradient(135deg, #1e90ff, #00bfff); /* TypeScript */
+}
+
+.skill-level.c {
+  background: linear-gradient(135deg, #6495ed, #4682b4); /* C */
+}
+
+.skill-level.cpp {
+  background: linear-gradient(135deg, #ffa07a, #ff4500); /* C++ */
+}
+
+.skill-level.python {
+  background: linear-gradient(135deg, #8a2be2, #4b0082); /* Python */
+}
+
+.skill-level.html {
+  background: linear-gradient(135deg, #ff6347, #ff4500); /* HTML */
+}
+
+.skill-level.css {
+  background: linear-gradient(135deg, #4682b4, #5f9ea0); /* CSS */
+}
+
+.skill-percentage {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.circular-skill {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+}
+
+.circular-skill .circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.circular-skill .circle svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circular-skill .circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 10;
+  stroke: #ddd;
+  r: 45%;
+  cx: 50%;
+  cy: 50%;
+}
+
+.circular-skill .circle svg circle:nth-child(2) {
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  stroke: #3a9ad9; /* Professional blue color */
+  transition: stroke-dashoffset 1s ease;
+ 
+}
+
+.circular-skill .circle[data-percent="85"] svg circle:nth-child(2) {
+  stroke-dashoffset: calc(283 - (283 * 85) / 100);
+}
+
+.circular-skill .circle[data-percent="80"] svg circle:nth-child(2) {
+  stroke-dashoffset: calc(283 - (283 * 80) / 100);
+}
+
+.circular-skill .circle[data-percent="90"] svg circle:nth-child(2) {
+  stroke-dashoffset: calc(283 - (283 * 90) / 100);
+}
+
+.circular-skill .circle[data-percent="75"] svg circle:nth-child(2) {
+  stroke-dashoffset: calc(283 - (283 * 75) / 100);
+}
+
+.circular-skill .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skill {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill span {
+    margin-bottom: 5px;
+  }
+
+  .skill-bar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .skill-percentage {
+    right: 5px;
+  }
+
+  .circular-skill {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
