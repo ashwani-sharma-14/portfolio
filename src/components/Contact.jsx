@@ -13,7 +13,7 @@ export default function Contact() {
           <div className="contact-item">
             <FontAwesomeIcon icon={faEnvelope} size="2x" />
             <h3>Email</h3>
-            <p><a href="mailto:your-ashwanisharma5541@gmail.com">ashwanisharma5541@gmail.com</a></p>
+            <p><a href="mailto:ashwanisharma5541@gmail.com">ashwanisharma5541@gmail.com</a></p>
           </div>
           <div className="contact-item">
             <FontAwesomeIcon icon={faPhone} size="2x" />
