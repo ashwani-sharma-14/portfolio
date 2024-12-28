@@ -23,7 +23,7 @@ const Hero = () => {
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
           <a
-            href="www.linkedin.com/in/ashwani-sharma-36b428273"
+            href="http://www.linkedin.com/in/ashwani-sharma-36b428273"
             target="_blank"
             rel="noopener noreferrer"
           >
