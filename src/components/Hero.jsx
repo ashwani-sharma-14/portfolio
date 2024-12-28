@@ -31,7 +31,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="img">{/* Your image is set via CSS */}</div>
+      <div className="img"></div>
       <div className="scroll-down">
         <a href="#about">
           <span></span>Scroll Down
