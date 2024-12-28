@@ -29,7 +29,7 @@ export default function Contact() {
           <a href="https://www.instagram.com/ashwani_sharma.14" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
-          <a href="www.linkedin.com/in/ashwani-sharma-36b428273" target="_blank" rel="noopener noreferrer">
+          <a href="http://www.linkedin.com/in/ashwani-sharma-36b428273" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
         </div>
